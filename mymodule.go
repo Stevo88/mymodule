@@ -1,5 +1,10 @@
 package mypackage
 
+import (
+	"os"
+	"bufio"
+)
+
 func makeArrayFromFile(filename string) ([]string, error) {
 	file, err := os.Open(filename)
 	if err != nil {
