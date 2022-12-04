@@ -1,4 +1,4 @@
-package mymodule
+package mypackage
 
 func Hello() string {
 	return "Hello, You!"
