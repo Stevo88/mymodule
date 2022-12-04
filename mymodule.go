@@ -9,6 +9,6 @@ func Hello() string {
 }
 
 func HelloAgain() string {
-	return "Hello, Again!"
 	fmt.Println("and again")
+	return "Hello, Again!"
 }
