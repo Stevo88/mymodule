@@ -1,7 +1,7 @@
 package mypackage
 
 import (
-	fmt
+	"fmt"
 )
 
 func Hello() string {
