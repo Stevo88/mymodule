@@ -5,7 +5,7 @@ import (
 	"bufio"
 )
 
-func makeArrayFromFile(filename string) ([]string, error) {
+func MakeArrayFromFile(filename string) ([]string, error) {
 	file, err := os.Open(filename)
 	if err != nil {
 		panic(err)
