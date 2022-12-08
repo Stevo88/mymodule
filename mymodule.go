@@ -1,9 +1,33 @@
 package mypackage
 
 import (
+	"flag"
 	"os"
 	"bufio"
 )
+
+func checkForTestMode() []string {
+	
+	flag.Parse()
+	fmt.Printf(flag.Arg(0))
+
+	var inputContentAsStringArray []string
+	var err error
+
+	if (flag.Arg(0) == "test") {
+		inputContentAsStringArray, err = mypackage.MakeArrayFromFile("input_file_sample.txt")
+	} else 
+	{
+		inputContentAsStringArray, err = mypackage.MakeArrayFromFile("input_file.txt")
+	}
+	
+
+	if err != nil {
+		panic(err)
+	}
+
+	return inputContentAsStringArray
+}
 
 func MakeArrayFromFile(filename string) ([]string, error) {
 	file, err := os.Open(filename)
