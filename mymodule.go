@@ -6,7 +6,7 @@ import (
 	"bufio"
 )
 
-func checkForTestMode() []string {
+func CheckForTestMode() []string {
 	
 	flag.Parse()
 	fmt.Printf(flag.Arg(0))
@@ -15,10 +15,10 @@ func checkForTestMode() []string {
 	var err error
 
 	if (flag.Arg(0) == "test") {
-		inputContentAsStringArray, err = mypackage.MakeArrayFromFile("input_file_sample.txt")
+		inputContentAsStringArray, err = makeArrayFromFile("input_file_sample.txt")
 	} else 
 	{
-		inputContentAsStringArray, err = mypackage.MakeArrayFromFile("input_file.txt")
+		inputContentAsStringArray, err = makeArrayFromFile("input_file.txt")
 	}
 	
 
@@ -29,7 +29,7 @@ func checkForTestMode() []string {
 	return inputContentAsStringArray
 }
 
-func MakeArrayFromFile(filename string) ([]string, error) {
+func makeArrayFromFile(filename string) ([]string, error) {
 	file, err := os.Open(filename)
 	if err != nil {
 		panic(err)
