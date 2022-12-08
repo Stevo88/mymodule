@@ -4,6 +4,7 @@ import (
 	"flag"
 	"os"
 	"bufio"
+	"fmt"
 )
 
 func CheckForTestMode() []string {
