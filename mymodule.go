@@ -29,6 +29,10 @@ func CheckForTestMode() []string {
 	return inputContentAsStringArray
 }
 
+func SanityCheck() {
+	fmt.Printf("Hello World")
+}
+
 func makeArrayFromFile(filename string) ([]string, error) {
 	file, err := os.Open(filename)
 	if err != nil {
